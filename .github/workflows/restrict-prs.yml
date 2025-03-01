@@ -11,6 +11,6 @@ jobs:
       - name: Check if PR is from a fork
         run: |
           if [[ "${{ github.event.pull_request.head.repo.fork }}" != "true" ]]; then
-            echo "❌ Este repositório aceita apenas PRs vindos de forks!"
+            echo "❌ This repository only accepts PRs from forks!"
             exit 1
           fi
