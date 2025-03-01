@@ -1,0 +1,16 @@
+name: Restrict PRs to Forks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-pr-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR is from a fork
+        run: |
+          if [[ "${{ github.event.pull_request.head.repo.fork }}" != "true" ]]; then
+            echo "❌ Este repositório aceita apenas PRs vindos de forks!"
+            exit 1
+          fi
