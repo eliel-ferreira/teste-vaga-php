@@ -22,6 +22,7 @@ Sua aplicação deve possuir:
   - Deve possuir formulários para criação e atualização de seus itens.
   - Deve permitir a deleção de qualquer item de sua lista.
   - Implementar validações de campos obrigatórios e tipos de dados.
+  
 - Deve utilizar compose para realizar autoload (PRS-4)
 
 ## Banco de dados
